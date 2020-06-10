@@ -2681,15 +2681,16 @@ input, select, textarea {
 			}
 		
 		#timeline {
-			width: 25em;	
+			width: 24em;
+			display: block;
+    			margin: 0 auto;
 		}
 
 		@media screen and (max-width: 1680px) {
 
 			#timeline {
 				width: 28em;
-				display: block;
-    				margin: 0 auto;
+				
 			}
 
 		}
@@ -2698,8 +2699,7 @@ input, select, textarea {
 
 			#timeline {
 				width: 28em;
-				display: block;
-    				margin: 0 auto;
+				
 			}
 
 		}
