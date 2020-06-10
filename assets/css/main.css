@@ -2679,6 +2679,42 @@ input, select, textarea {
 			.image.main img {
 				width: 100%;
 			}
+		
+		@media screen and (max-width: 1680px) {
+
+			#timeline {
+				width: 28em;
+				display: block;
+    				margin: 0 auto;
+			}
+
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			#timeline {
+				width: 28em;
+				display: block;
+    				margin: 0 auto;
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			#timeline {
+				width: 100%;
+			}
+
+		}
+
+		@media screen and (max-width: 360px) {
+
+			#timeline {
+				width: 100%;
+			}
+
+		}
 
 /* List */
 
