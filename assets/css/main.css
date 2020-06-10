@@ -2680,6 +2680,10 @@ input, select, textarea {
 				width: 100%;
 			}
 		
+		#timeline {
+			width: 25em;	
+		}
+
 		@media screen and (max-width: 1680px) {
 
 			#timeline {
