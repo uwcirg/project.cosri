@@ -37,22 +37,42 @@
 
 								<h2>Use Case Development</h2>
 								<p>Starting in March 2021 CIRG identified two clinical partners and began detailed user engagement and experience assessments in order to model the initial COSRI application into a testable application that could be evaluated for use across two clinical care settings in WA State. This included:</p>
-								<ul>
+								<ol>
 									<li>User engagement interviews</li>
 									<li>Iterative user experience focus groups and interviews with respect to application utility and features</li>
 									<li>Development of new technical features including:
 										<ul>
-											<li>free-standing application capabilities
-											<li>secure file upload and integration of clinical data from the EHR
-											<li>sorting and searching for patient data for PDMP database calls
-											<li>classification of types of controlled substance medications to allow for easier searching
-											 <li>sorting and search of controlled substance medication
-											 <li>alerts for prescribing risks including co-prescribing of opioids, sedatives, benzodiazapines, carisoprodol, and barbiturates
-											 <li>urine drug screen order dates
-											 <li>dates for controlled substance prescribing agreements signed with patients
+											<li>ability to launch from outside of an EHR</li>
+											<li>real time query integration with the PDMP database</li>
+											<li>inclusion of CQL logic rules for WA State</li>
+											<li>inclusion of CQL logic for morphine equivalent dose (MED)</li>
+											      <li>Conversion from NDC codes to RxNORM for reasoning, using NLM RxNAV tool</li>
+											      <li>Extension of SMART on FHIR launch security tokens to provide user level authentication between system components</li>
+											      <li>User alerts for unreliable and/or unavailable data</li>
+											      <li>Tailoring of MED history summative graphs to demonstrate current and historical MED based on dispensed prescription</li>
+											      <li>Suppression of summative graphs when MME cannot be calculated</li>
+											      <li>secure file upload and integration of clinical data from the EHR</li>
+											      <li>sorting and searching for patient data for PDMP database calls</li>
+											      <li>classification of types of controlled substance medications to allow for easier searching</li>
+											      <li>Provision of all controlled substance prescribing medications with the ability to search, sort and filter in order to help providers explore patterns of controlled substance use in their patients for appropriate discussion, treatment and decision support when prescribing opioids</li>
+											      <li>CDS alerts for prescribing risks including age > 65 years and co-prescribing of opioids, sedatives, benzodiazapines, carisoprodol, and barbiturates</li>
+											      <li>urine drug screen order dates</li>
+											      <li>dates for controlled substance prescribing agreements signed with patients</li>
+											      <li>usage and event logging features to ensure data quality and system functionally, and provide high quality user support</li>
+											      <li>inclusion of a security model for protecting all services</li>
 										</ul>
 									<li>Extensive testing and validation of application components including, but not limited to:</li>
-								</ul>
+										<ul>
+											<li>Development of hundreds of tailored mock patient xml PDMP messages in order to test features and functionality</li>
+											<li>Validation of the MED calculator based on 250 mock patient xmls and >4000 opioid medication NDC</li>
+										  	<li>Validation of alerts correctly triggered</li>
+											<li>Validation of error messages correctly triggered</li>
+											<li>Validation of correct assignment of drug class</li>
+											<li>Extensive authentication testing, including introduction of known authentication problems</li>
+											<li>Intensive use of the system across many test patients in order to capture unexpected errors</li>
+											<li>activity and inactivity testing with time lapse recording to determine if system time outs we operating as expected</li>
+										</ul>
+								</ol>
 								<h2><i>Clinical Testing and Evaluation</i></h2>
 								<p>Beginning on September 14, 2021 we implemented the COSRI application into our first clinical test setting in WA State, followed by implementation at our second site on October 6, 2021. Both sites provide primary care to the local community and care for a large number of patients who receive controlled substances.</p>
 								<p>Since implementation, all care providers at both sites have been able to access PDMP data through COSRI, with high volume use. Initial feedback, suggests that it is fast and easy to use. Minor authentication problems have been the only reported issues thus far.</p>
