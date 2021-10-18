@@ -3032,6 +3032,15 @@ input, select, textarea {
 				border-top: 0;
 			}
 
+		table.timeline {
+			border-collapse: separate;
+		}
+
+			table.timeline tr td {
+				border-right: solid 10px;
+				border-color: #8BF9FB;
+			}
+
 		table.fixed {
 			table-layout: fixed;
 		}
