@@ -3032,6 +3032,14 @@ input, select, textarea {
 				border-top: 0;
 			}
 
+		table.timeline {
+			border-collapse: separate;
+		}
+
+			table.timeline tr td {
+				border-right: solid 3px;
+			}
+
 		table.fixed {
 			table-layout: fixed;
 		}
