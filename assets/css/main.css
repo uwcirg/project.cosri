@@ -3038,6 +3038,7 @@ input, select, textarea {
 
 			table.timeline tr td {
 				border-right: solid 10px;
+				border-color: #8BF9FB;
 			}
 
 		table.fixed {
