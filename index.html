@@ -32,63 +32,17 @@
 							<div class ="topics" style="background: rgba(255, 255, 255, 0.4); text-align: left; padding: 3em;">
 								
 								<p>COSRI (Clinical Opioid Summary with Rx Integration) is an application for viewing controlled substance medications dispensed for a patient in clinical care from Prescription Drug Monitoring Programs (PDMP) database. It provides decision support for opioid medication prescribing based on CDC guidelines, and can also be tailored to state prescribing rules, with the current demonstration version including Washington state opioid prescribing rules. COSRI is a smart-on-FHIR application that can be implemented either as a free-standing application or integrated with an existing electronic health record (EHR). It is open source, with no license fees to use. COSRI extends and contextualizes software from the CDSConnect project, led by AHRQ and CDC.</p>
-								<h2>Initial Development</h2>								
-								<p>Between October 1, 2019 and September 30, 2020 the Clinical Informatics Research Group (CIRG) at the University of Washington and the Washington (WA) State Department of Health (DoH) partnered to develop novel, standards-based informatics tools and methods to facilitate clinician access and use of the Prescription Drug Monitoring Program (PDMP) database. As one objective of this partnership CIRG at the University of Washington (UW) developed a clinical decision support (CDS) tool known as Clinical Opioid Summary with Rx Integration (COSRI). COSRI was built to provide CDS messages, alerts, and data visualization to help providers to more easily follow Washington State and CDC opioid prescribing guidelines. </p>
-								<p>This initial application was designed to be  embedded in the EHR using “SMART on FHIR”, but included a novel capability which allows it to also function in a freestanding mode.. User engagement interviews were supported through  introductions by the UW’s WWAMI region Practice and Research Network (WPRN) to providers across WA state.  These interviews  indicated that providers had a strong interest in tests of COSRI and a need for this type of clinical support. </p>
+																<p>The initial AHRQ application runs only when  embedded in an EHR using “SMART on FHIR”.  COSRI includes a novel capability which allows it to also function in a freestanding mode. User engagement and participatory interviews established free-standing mode as important to our early providers </p>
+								<h2>Open Source</h2>								
+	
+<p><a href="https://github.com/uwcirg/cosri-pain-management-summary" target="_blank">https://github.com/uwcirg/cosri-pain-management-summary.</a></p>
 
-								<h2>Use Case Development</h2>
-								<p>Starting in March 2021 CIRG identified two clinical partners and began detailed user engagement and experience assessments in order to model the initial COSRI application into a testable application that could be evaluated for use across two clinical care settings in WA State. This included:</p>
-								<ol>
-									<li>User engagement interviews</li>
-									<li>Iterative user experience focus groups and interviews with respect to application utility and features</li>
-									<li>Development of new technical features including:
-										<ul>
-											<li>ability to launch from outside of an EHR</li>
-											<li>real time query integration with the PDMP database</li>
-											<li>inclusion of CQL logic rules for WA State</li>
-											<li>inclusion of CQL logic for morphine equivalent dose (MED)</li>
-											      <li>Conversion from NDC codes to RxNORM for reasoning, using NLM RxNAV tool</li>
-											      <li>Extension of SMART on FHIR launch security tokens to provide user level authentication between system components</li>
-											      <li>User alerts for unreliable and/or unavailable data</li>
-											      <li>Tailoring of MED history summative graphs to demonstrate current and historical MED based on dispensed prescription</li>
-											      <li>Suppression of summative graphs when MME cannot be calculated</li>
-											      <li>secure file upload and integration of clinical data from the EHR</li>
-											      <li>sorting and searching for patient data for PDMP database calls</li>
-											      <li>classification of types of controlled substance medications to allow for easier searching</li>
-											      <li>Provision of all controlled substance prescribing medications with the ability to search, sort and filter in order to help providers explore patterns of controlled substance use in their patients for appropriate discussion, treatment and decision support when prescribing opioids</li>
-											      <li>CDS alerts for prescribing risks including age > 65 years and co-prescribing of opioids, sedatives, benzodiazapines, carisoprodol, and barbiturates</li>
-											      <li>urine drug screen order dates</li>
-											      <li>dates for controlled substance prescribing agreements signed with patients</li>
-											      <li>usage and event logging features to ensure data quality and system functionally, and provide high quality user support</li>
-											      <li>inclusion of a security model for protecting all services</li>
-										</ul>
-									<li>Extensive testing and validation of application components including, but not limited to:</li>
-										<ul>
-											<li>Development of hundreds of tailored mock patient xml PDMP messages in order to test features and functionality</li>
-											<li>Validation of the MED calculator based on 250 mock patient xmls and >4000 opioid medication NDC</li>
-										  	<li>Validation of alerts correctly triggered</li>
-											<li>Validation of error messages correctly triggered</li>
-											<li>Validation of correct assignment of drug class</li>
-											<li>Extensive authentication testing, including introduction of known authentication problems</li>
-											<li>Intensive use of the system across many test patients in order to capture unexpected errors</li>
-											<li>activity and inactivity testing with time lapse recording to determine if system time outs we operating as expected</li>
-										</ul>
-								</ol>
-								<h2>Clinical Testing and Evaluation</h2>
-								<p>Beginning on September 14, 2021 we implemented the COSRI application into our first clinical test setting in WA State, followed by implementation at our second site on October 6, 2021. Both sites provide primary care to the local community and care for a large number of patients who receive controlled substances.</p>
-								<p>Since implementation, all care providers at both sites have been able to access PDMP data through COSRI, with high volume use. Initial feedback, suggests that it is fast and easy to use. Minor authentication problems have been the only reported issues thus far.</p>
-								<p>We are collecting data for robust evaluation of COSRI including:</p>
-								<ol>
-									<li>User experience via a series of qualitative interviews and record of service desk requests and user initiated issues to determine utility, satisfaction and acceptance by clinical care providers.</li>
-									<li>System usage via system audit logs to determine both the frequency and volume of use.</li>
-									<li>System performance via system audit logs to determine number of errors encountered.</li>
-									<li>Value of support materials and other features via system audit logs to determine the utility of specific features included in the system.</li>
-									<li>MME calculator performance via audit logs to determine accuracy of key information provided to the end users.</li>
-									<li>Numbers of alert notifications via system audit logs to determine possible issues averted.</li>
-									<li>Changes in prescribing 6 months pre and 6 months post-implementation via clinic electronic health record data and PDMP returns to determine if prescribing behaviors changed after COSRI implementations. </li>
-									<li>Changes in expediency of urine drug screens and opioid contracts 6 months pre and 6 months post-implementation via electronic health record data presented within the COSRI system.  </li>
-									<li>Change in PDMP usage 6 months pre and 6 months post-implementation via audit of PDMP access and self-reported access in qualitative interviews.</li>
-								</ol>
+<p>The above repository is a good place to start. If you're looking to deploy COSRI in a free-standing SMART on FHIR environment, you'll probably also want to look at:</p>
+
+<p><a href="https://github.com/uwcirg/cosri-patientsearch<" target="_blank">https://github.com/uwcirg/cosri-patientsearch</a></p>
+<p><a href="https://github.com/uwcirg/cosri-environments" target="_blank">https://github.com/uwcirg/cosri-environments</a></p>
+
+
 									
 								<h2>UW COSRI TEAM MEMBERS</h2>
 								<p><b><i>Principal Investigators</i></b>
